@@ -60,3 +60,25 @@ function App () => {
       </div>
    )
 }
+
+
+변수에 넣어서 사용하는 아래와 같은 방식도 있다.
+
+function Modal() {
+   return (
+     <div className="modal">
+       <h4>{props.글제목}</h4>
+       <p>날짜</p>
+       <p>상세내용</p>
+     </div>
+   );
+ }
+ const Modal2 = () => {
+   return (
+     <div className="modal">
+       <h4>제목</h4>
+       <p>날짜</p>
+       <p>상세내용</p>
+     </div>
+   );
+ };

@@ -26,11 +26,11 @@
 
 //------------------------------------------------------------
 
-function App() {
+function App(e) {
     let post = '강남 우동 맛집'; 
     //document.querySelector('h4').innerHTML = post;
     //이렇게 길게 써야하는데 리액트를 사용하면 아래처럼 중괄호 문법을 쓰면 변수를 쉽게 넣을 수 있다.
-  
+
     return (
       <div className="App">
         <div className="App">
@@ -42,4 +42,5 @@ function App() {
       </div>
     );
   }
+  
   

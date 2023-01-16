@@ -5,10 +5,13 @@ Redux 사용하면 컴포넌트들이 props없이 state공유 가능하다.
 redux store.js에 state들이 저장되어 있고 다른 컴포넌트에서 자유롭게 꺼내쓸 수 있다. 
 package.json 에서 react와 recat-dom버전이 18.1 버전 이상에서만 redux가 작동한다.  
 
+redux toolkit
+Redux를 조금 더 쓰기 쉽게 만든 버전
+
 1. 설치
 npm install @reduxjs/toolkit react-redux
 
-2.tptxld
+2. 셋팅
 
 (1)store.js파일 생성
 state를 저장할 통 만들기. 

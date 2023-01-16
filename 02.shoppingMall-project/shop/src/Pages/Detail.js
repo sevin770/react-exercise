@@ -2,6 +2,8 @@ import { useEffect, useState } from "react"
 import { Link, useParams } from "react-router-dom"
 import styled from "styled-components"
 import { Fade, Nav } from 'react-bootstrap'
+import { addItem } from "../store"
+import { useDispatch } from "react-redux"
 
 let YellowBtn = styled.button`
   background: ${(props) => props.bg};
@@ -12,6 +14,7 @@ let YellowBtn = styled.button`
 let Box = styled.div`
   padding: 20px;
 `;
+
 
 function Detail1(props) {
   let [alert, setAlert] = useState(true);
@@ -70,13 +73,24 @@ function Detail1(props) {
 }
 
 function Detail2(props) {
+
+  
   let { id } = useParams();
   let 찾은상품 = props.shoes.find(function (x) {
     return x.id == id;
   });
 
-  let [탭, 탭변경] = useState(0)
+  let [탭, 탭변경] = useState(0);
+  let dispatch = useDispatch();
 
+  useEffect(()=>{
+    let 꺼낸거 = localStorage.getItem('watched');
+    꺼낸거 = JSON.parse(꺼낸거)
+    꺼낸거 = new Set(꺼낸거)
+    꺼낸거 = Array.from(꺼낸거)
+    꺼낸거.push(찾은상품.id)
+    localStorage.setItem('watched', JSON.stringify(꺼낸거))
+  },[])
 
   return (
     <div className="container">
@@ -91,7 +105,8 @@ function Detail2(props) {
           <h4 className="pt-5">{찾은상품.title}</h4>
           <p>{찾은상품.content}</p>
           <p>{찾은상품.price}</p>
-          <button className="btn btn-danger">주문하기</button>
+          <button className="btn btn-danger" onClick={()=>{dispatch(addItem({id:3, name:
+          'Grey item', count:1}));}}>주문하기</button>
         </div>
       </div>
       <Nav variant="tabs" defaultActiveKey="link0">
@@ -136,4 +151,4 @@ function TabContent({탭, shoes}){
   ) 
 }
 
-export { Detail1, Detail2 };
+export { Detail1, Detail2 } ;

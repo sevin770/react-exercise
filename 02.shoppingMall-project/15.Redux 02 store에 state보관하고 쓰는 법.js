@@ -90,7 +90,8 @@ let cart = createSlice({
   }) 
 
 
-가져다 쓰기
+◆ state 가져다 쓰기
+useSelector
 
 -------
 let state = useSelector((state)=>state)
@@ -100,10 +101,10 @@ console.log(state.cart[0].name)
 
 function Cart() {
   
-    let a = useSelector((state) => {return state })
-    // console.log(a)
-    // console.log(a.user)
-    // console.log(a.stock)
+    let state = useSelector((state) => {return state.cart })
+    // console.log(state)
+    // console.log(state.user)
+    // console.log(state.stock)
   
     let cartItem = useSelector((state)=> state.product)
     console.log(cartItem);

@@ -1,3 +1,10 @@
+store의 state 수정하기
+
+1.수정함수 만들기
+2.export
+3.원하는 곳에서 import
+
+
 import { increase } from "./shop/src/store"
 
 state가 array/object인 경우
@@ -22,7 +29,7 @@ let user = createSlice({
     initialState : {name: 'kim', age: 20},
     reducers : {
         changeName(state){
-            return {name: 'partk , age: 20}
+            return {name: 'park', age: 20}
         }
     }
 })

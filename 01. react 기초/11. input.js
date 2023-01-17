@@ -40,7 +40,7 @@ state 변경 함수는 늦게 처리된다. 그래서 완료되기도 전에 콘
 
 -혼자해보기
 버튼 누르면 글 하나 추가되는 기능 만들기. 
-(unshift:arrat 맨 앞에 추가, push:array 맨 끝에 추가)
+(unshift:array 맨 앞에 추가, push:array 맨 끝에 추가)
 
 <input onChange={(e)=>{ 입력값변경(e.target.value);}} />
 <button onClick={()=>{ 

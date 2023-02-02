@@ -52,3 +52,5 @@ let {재고, shoes} = useContext(Context1)
 {재고} 라고 쓰면 props가 없어도 app 에 있던 state 10,11,12가 나온다. 
 
 detail컴포넌트 뿐만 아니라 그 자식컴포넌트들도 props없이 위에 코드만 짜주면 자유롭게 쓸 수 있다. 
+
+

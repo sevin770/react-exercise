@@ -24,20 +24,20 @@ export let {numCount} = product.actions
 
 위처럼 데이터 작성후 cart.js에서 사용하기
  
-        {
-            cartItem.map((a,i)=>{
-              return(
-              <tr key={i}>
-                <td>{cartItem[i].id}</td>
-                <td>{cartItem[i].name}</td>
-                <td>{cartItem[i].count}</td>
-                <td><button onClick={()=>{
-                  dispatch(numCount(cartItem[i].id)); 
-                }}>+</button></td>
-              </tr>
-              )
-            })
-          }
+{
+    cartItem.map((a,i)=>{
+      return(
+      <tr key={i}>
+        <td>{cartItem[i].id}</td>
+        <td>{cartItem[i].name}</td>
+        <td>{cartItem[i].count}</td>
+        <td><button onClick={()=>{
+          dispatch(numCount(cartItem[i].id)); 
+        }}>+</button></td>
+      </tr>
+      )
+    })
+}
 
 ------------------------------------------------------------
 
